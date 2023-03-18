@@ -9,7 +9,7 @@ Parameters:
   EksClusterName:
     Type: String
     Description: The name of the EKS cluster created
-    Default: simple-jwt-api-v2
+    Default: simple-jwt-api-v3
     MinLength: 1
     MaxLength: 100
     ConstraintDescription: You must enter the EKS cluster name
@@ -17,7 +17,7 @@ Parameters:
   GitSourceRepo:
     Type: String
     Description: GitHub source repository - must contain a Dockerfile and buildspec.yml in the base
-    Default: cd0157-Server-Deployment-and-Containerization
+    Default: udacityDocker
     MinLength: 1
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub repository name
@@ -56,7 +56,7 @@ Parameters:
 
   KubectlRoleName:
     Type: String
-    Default: UdacityFlaskDeployCBKubectlRole
+    Default: UdacityFlaskDeployCBKubectlRole2
     Description: IAM role used by kubectl to interact with EKS cluster
     MinLength: 3
     MaxLength: 100
@@ -325,7 +325,7 @@ Resources:
           - Name: EKS_KUBECTL_ROLE_ARN
             Value: !Sub arn:aws:iam::${AWS::AccountId}:role/${KubectlRoleName}
         PrivilegedMode: true
-      Name: !Ref AWS::myF5NDstack
+      Name: !Ref AWS::StackName
       ServiceRole: !GetAtt CodeBuildServiceRole.Arn
     DependsOn: KubectlAssumeRoleCustomResource
 
