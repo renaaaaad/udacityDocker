@@ -3,11 +3,24 @@
     "Statement": [
         {
             "Effect": "Allow",
-            "Action": [
-                "eks:Describe*",
-                   "ssm:GetParameters"
-            ],
-            "Resource": "*"
+            "Principal": {
+                "AWS": "AROAVJZWJQU7JYSTA7YZ5"
+            },
+            "Action": "sts:AssumeRole"
+        },
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "AROAVJZWJQU7NFLJGQ6WU"
+            },
+            "Action": "sts:AssumeRole"
+        },
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::364649219390:root"
+            },
+            "Action": "sts:AssumeRole"
         }
     ]
-   }
+}
