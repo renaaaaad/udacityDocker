@@ -56,4 +56,4 @@ artifacts:
   files: build.json
 env:
   parameter-store:         
-    JWT_SECRET: JWT_SECRET
+    JWT_SECRET: AQICAHjAxOs4NZf7TTSFli5px8NeVP62K/7Ib4Ff5okn8wiZvwHn4SfNK9dQcR5s1p/BqbF4AAAAaTBnBgkqhkiG9w0BBwagWjBYAgEAMFMGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMwnoC5ArwJCOw3TSeAgEQgCaO0tQXWVrUlSZHO0PgFDdOqHKv7qEw+Y63TKnFE15kdVIJvbpwCw==
